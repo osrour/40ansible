@@ -490,7 +490,7 @@ def fortigate_config_put(data):
 
     fos.logout()
 
-    meta = {"status": resp['status'], 'version': resp['version'], }
+    meta = {"status": resp['status'], 'http_status': resp['http_status']}
     if resp['status'] == "success":
         return False, True, meta
     else:
