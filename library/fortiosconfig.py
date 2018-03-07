@@ -528,7 +528,7 @@ def fortigate_config_set(data):
                    data=data['config_parameters'])
     fos.logout()
 
-    meta = {"status": resp['status'], 'version': resp['version'], }
+    meta = {"status": resp['status'], 'http_status': resp['http_status']}
     if resp['status'] == "success":
         return False, True, meta
     else:
